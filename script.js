@@ -4,7 +4,7 @@ let hug = document.getElementById("hug");
 
 let size = 22;
 
-// NO button runs away + shrinks
+// NO button shrinks + moves
 noBtn.onclick = function () {
     size -= 2;
     noBtn.style.fontSize = size + "px";
@@ -19,22 +19,14 @@ noBtn.onclick = function () {
 // YES button magic
 yesBtn.onclick = function () {
     let music = document.getElementById("bgm");
-    music.play(); // Start music on iPhone
+    music.play(); // iPhone fix
 
     hug.classList.remove("hidden");
     startHearts();
 
     setTimeout(function () {
         window.location.href = "love.html";
-    }, 2000);
-};
-
-    hug.classList.remove("hidden");
-    startHearts();
-
-    setTimeout(function () {
-        window.location.href = "love.html";
-    }, 2000);
+    }, 2500);
 };
 
 // Hearts animation
@@ -49,3 +41,4 @@ function startHearts() {
         setTimeout(() => heart.remove(), 4000);
     }, 300);
 }
+
