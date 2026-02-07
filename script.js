@@ -29,7 +29,7 @@ yesBtn.onclick = function () {
     }, 2500);
 };
 
-// Hearts animation
+// Hearts animation for index page
 function startHearts() {
     setInterval(() => {
         let heart = document.createElement("div");
@@ -41,4 +41,3 @@ function startHearts() {
         setTimeout(() => heart.remove(), 4000);
     }, 300);
 }
-
