@@ -2,17 +2,25 @@
 <html>
 <head>
 <title>My Drashtuu ❤️</title>
+
 <style>
 body {
     background: #ffe4e1;
     text-align: center;
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS", cursive;
+    padding-top: 30px;
+}
+
+h1 {
+    color: #ff1493;
+    font-size: 32px;
 }
 
 img {
     width: 300px;
     border-radius: 20px;
     margin-top: 20px;
+    box-shadow: 0 0 20px pink;
 }
 
 #text {
@@ -20,6 +28,7 @@ img {
     color: #ff1493;
     width: 70%;
     margin: auto;
+    line-height: 1.5;
 }
 </style>
 </head>
@@ -30,23 +39,34 @@ img {
 
 <p id="text"></p>
 
+<!-- CHANGE IMAGE NAME IF NEEDED -->
 <img src="images/your_photo.jpg">
 
-<audio id="bgm" src="music.mp3" loop playsinline></audio>
+<!-- Background Music -->
+<audio id="bgm" src="music.mp3" loop></audio>
 
 <script>
-let audio = document.getElementById("bgm2");
-audio.play();
+// Force music play on iPhone Safari after first tap
+document.body.addEventListener("click", function() {
+    let music = document.getElementById("bgm");
+    music.play();
+});
 </script>
 
 <script>
-let msg = `I am sorry for not being present on 10th when we completed 4 years.
+// Romantic Apology Letter Typing Effect
+let msg = `My love Drashtuu ❤️
 
-I am sorry for hurting you.
+I am sorry for not being present on 10th when we completed 4 years.
 
-I wanted to celebrate 10th with you but I am stuck and helpless.
+I am really sorry for hurting you.
 
-I love you so much and I miss you every moment 💕`;
+I wanted to celebrate 10th with you, but I am stuck and helpless and I couldn’t make it.
+
+I love you so so much and I miss you every single moment.
+
+You are my girl, my baby, my future wife 💍
+Please forgive your Yashuu 💕`;
 
 let i = 0;
 function typeText() {
