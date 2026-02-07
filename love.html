@@ -32,7 +32,12 @@ img {
 
 <img src="images/your_photo.jpg">
 
-<audio src="music.mp3" controls></audio>
+<audio id="bgm2" src="music.mp3" loop></audio>
+
+<script>
+let audio = document.getElementById("bgm2");
+audio.play();
+</script>
 
 <script>
 let msg = `I am sorry for not being present on 10th when we completed 4 years.
