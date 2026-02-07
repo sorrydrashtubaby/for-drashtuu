@@ -1,8 +1,10 @@
+/* General container */
 .container {
     text-align: center;
     margin-top: 100px;
 }
 
+/* Buttons */
 button {
     font-size: 22px;
     padding: 12px 20px;
@@ -12,16 +14,19 @@ button {
     cursor: pointer;
 }
 
+/* Hug message */
 #hug {
     font-size: 30px;
     color: red;
     margin-top: 20px;
 }
 
+/* Hidden class */
 .hidden {
     display: none;
 }
 
+/* Floating hearts */
 .heart {
     position: fixed;
     font-size: 24px;
@@ -29,6 +34,7 @@ button {
     animation: floatUp 4s linear forwards;
 }
 
+/* Heart animation */
 @keyframes floatUp {
     from { top: 100%; }
     to { top: -10%; }
