@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Drashtuu ❤️</title>
-
 <style>
-/* Background */
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: url('images/cute-bg.jpg'); /* Same cute background */
+    background-image: url('images/cute-bg.jpg'); /* must match exactly */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,26 +17,18 @@ body {
     text-align: center;
     color: #ff1493;
 }
-
-/* Overlay for soft pink effect */
 .overlay {
     background-color: rgba(255, 228, 225, 0.6);
     min-height: 100vh;
     padding-top: 30px;
 }
-
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
+h1 { font-size: 32px; margin-bottom: 20px; }
 img {
     width: 300px;
     border-radius: 20px;
     margin-top: 20px;
     box-shadow: 0 0 20px pink;
 }
-
 #text {
     font-size: 22px;
     width: 70%;
@@ -47,25 +37,18 @@ img {
 }
 </style>
 </head>
-
 <body>
 <div class="overlay">
 <h1>My Drashtuu ❤️</h1>
 <p id="text"></p>
-
 <img src="images/your_photo.jpg">
-
-<!-- Background Music -->
 <audio id="bgm" src="music.mp3" loop></audio>
 
 <script>
-// Force music play after first tap (Safari fix)
 document.body.addEventListener("click", function() {
     let music = document.getElementById("bgm");
     music.play();
 });
-
-// Typing effect
 let msg = `My love Drashtuu ❤️
 
 I am sorry for not being present on 10th when we completed 4 years.
@@ -78,7 +61,6 @@ I love you so so much and I miss you every single moment.
 
 You are my girl, my baby, my future wife 💍
 Please forgive your Yashuu 💕`;
-
 let i = 0;
 function typeText() {
     if (i < msg.length) {
@@ -88,10 +70,6 @@ function typeText() {
     }
 }
 typeText();
-</script>
-
-<!-- Floating Hearts on Love Page -->
-<script>
 function startHearts() {
     setInterval(() => {
         let heart = document.createElement("div");
@@ -104,6 +82,5 @@ function startHearts() {
 }
 startHearts();
 </script>
-
 </body>
 </html>
