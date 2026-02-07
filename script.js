@@ -4,7 +4,6 @@ let hug = document.getElementById("hug");
 
 let size = 22;
 
-// NO button shrinks + moves
 noBtn.onclick = function () {
     size -= 2;
     noBtn.style.fontSize = size + "px";
@@ -16,10 +15,9 @@ noBtn.onclick = function () {
     noBtn.style.top = y + "px";
 };
 
-// YES button magic
 yesBtn.onclick = function () {
     let music = document.getElementById("bgm");
-    music.play(); // iPhone fix
+    music.play();
 
     hug.classList.remove("hidden");
     startHearts();
@@ -29,7 +27,6 @@ yesBtn.onclick = function () {
     }, 2500);
 };
 
-// Hearts animation for index page
 function startHearts() {
     setInterval(() => {
         let heart = document.createElement("div");
@@ -37,7 +34,6 @@ function startHearts() {
         heart.className = "heart";
         heart.style.left = Math.random() * window.innerWidth + "px";
         document.body.appendChild(heart);
-
         setTimeout(() => heart.remove(), 4000);
     }, 300);
 }
