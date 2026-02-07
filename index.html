@@ -5,22 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Drashtuu 💖</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-/* Cute full-page background */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('images/cute-bg.jpg'); /* Replace with your background */
+    background-image: url('images/cute-bg.jpg'); /* must match exactly */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Comic Sans MS', cursive;
 }
-
 .overlay {
-    background-color: rgba(255, 192, 203, 0.4); /* soft pink overlay */
+    background-color: rgba(255, 192, 203, 0.4);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -28,7 +25,6 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
 h1 {
     color: white;
     font-size: 3rem;
@@ -37,21 +33,17 @@ h1 {
 }
 </style>
 </head>
-
 <body>
 <div class="overlay container">
     <h1>Welcome Drashtuu 💖</h1>
-
     <button id="yesBtn">Yes 💕</button>
     <button id="noBtn">No 😅</button>
-
     <div id="hug" class="hidden">🤗 Hug from Yashuu!</div>
 </div>
 
 <!-- Background music -->
 <audio id="bgm" src="music.mp3" loop></audio>
 
-<!-- Scripts -->
 <script src="script.js"></script>
 </body>
 </html>
