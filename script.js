@@ -18,6 +18,17 @@ noBtn.onclick = function () {
 
 // YES button magic
 yesBtn.onclick = function () {
+    let music = document.getElementById("bgm");
+    music.play(); // Start music on iPhone
+
+    hug.classList.remove("hidden");
+    startHearts();
+
+    setTimeout(function () {
+        window.location.href = "love.html";
+    }, 2000);
+};
+
     hug.classList.remove("hidden");
     startHearts();
 
