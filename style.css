@@ -1,32 +1,19 @@
-body {
-    background: pink;
-    text-align: center;
-    font-family: Comic Sans MS;
-    overflow: hidden;
-}
-
 .container {
-    margin-top: 80px;
-}
-
-h1 {
-    font-size: 32px;
-    color: red;
+    text-align: center;
+    margin-top: 100px;
 }
 
 button {
-    padding: 15px 30px;
     font-size: 22px;
-    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
-    background: hotpink;
-    color: white;
-    margin: 10px;
 }
 
 #hug {
-    font-size: 45px;
+    font-size: 30px;
     color: red;
     margin-top: 20px;
 }
@@ -35,15 +22,14 @@ button {
     display: none;
 }
 
-/* Floating hearts */
 .heart {
     position: fixed;
-    color: red;
-    font-size: 20px;
-    animation: floatUp 4s linear infinite;
+    font-size: 24px;
+    top: 100%;
+    animation: floatUp 4s linear forwards;
 }
 
 @keyframes floatUp {
-    0% { bottom: 0; opacity: 1; }
-    100% { bottom: 100vh; opacity: 0; }
+    from { top: 100%; }
+    to { top: -10%; }
 }
