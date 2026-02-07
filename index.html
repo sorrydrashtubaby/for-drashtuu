@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>For My Drashtuu ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Drashtuu 💖</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Cute full-page background */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('images/cute-bg.jpg'); /* Replace with your background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.overlay {
+    background-color: rgba(255, 192, 203, 0.4); /* soft pink overlay */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #ffb6c1;
+    margin-bottom: 30px;
+}
+</style>
 </head>
 
 <body>
+<div class="overlay container">
+    <h1>Welcome Drashtuu 💖</h1>
 
-<div class="container">
-<h1>Will you forgive me, Drashtuu? 💖</h1>
+    <button id="yesBtn">Yes 💕</button>
+    <button id="noBtn">No 😅</button>
 
-<button id="yesBtn">Yes, apology accepted 😘</button>
-<button id="noBtn">No, I am angry 😢</button>
-
-<div id="hug" class="hidden">🤗🤗 BIG VIRTUAL HUG FOR DRASHTUU 🤗🤗</div>
-
-<audio id="bgm" src="music.mp3" loop playsinline></audio>
-
+    <div id="hug" class="hidden">🤗 Hug from Yashuu!</div>
 </div>
 
-<div id="hearts"></div>
+<!-- Background music -->
+<audio id="bgm" src="music.mp3" loop></audio>
 
+<!-- Scripts -->
 <script src="script.js"></script>
 </body>
 </html>
