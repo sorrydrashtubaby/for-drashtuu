@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Drashtuu ❤️</title>
+<style>
+body {
+    background: #ffe4e1;
+    text-align: center;
+    font-family: Comic Sans MS;
+}
+
+img {
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+#text {
+    font-size: 22px;
+    color: #ff1493;
+    width: 70%;
+    margin: auto;
+}
+</style>
+</head>
+
+<body>
+
+<h1>My Drashtuu ❤️</h1>
+
+<p id="text"></p>
+
+<img src="images/our_photo.jpg">
+
+<audio src="music.mp3" autoplay loop></audio>
+
+<script>
+let msg = `I am sorry for not being present on 10th when we completed 4 years.
+
+I am sorry for hurting you.
+
+I wanted to celebrate 10th with you but I am stuck and helpless.
+
+I love you so much and I miss you every moment 💕`;
+
+let i = 0;
+function typeText() {
+    if (i < msg.length) {
+        document.getElementById("text").innerHTML += msg.charAt(i);
+        i++;
+        setTimeout(typeText, 40);
+    }
+}
+typeText();
+</script>
+
+</body>
+</html>
