@@ -1,21 +1,40 @@
-let noBtn = document.getElementById('noBtn');
-let yesBtn = document.getElementById('yesBtn');
-let hug = document.getElementById('hug');
-let message = document.getElementById('message');
+let noBtn = document.getElementById("noBtn");
+let yesBtn = document.getElementById("yesBtn");
+let hug = document.getElementById("hug");
 
-let fontSize = 22;
+let size = 22;
 
-noBtn.addEventListener('click', () => {
-    fontSize -= 2;
-    message.style.fontSize = fontSize + 'px';
+// NO button runs away + shrinks
+noBtn.onclick = function () {
+    size -= 2;
+    noBtn.style.fontSize = size + "px";
 
-    if(fontSize <= 12){
-        alert("Drashtuu, please forgive me 😢");
-    }
-});
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+};
 
-yesBtn.addEventListener('click', () => {
-    hug.classList.remove('hidden');
-    hug.style.fontSize = '28px';
-    hug.style.color = '#ff1493';
-});
+// YES button magic
+yesBtn.onclick = function () {
+    hug.classList.remove("hidden");
+    startHearts();
+
+    setTimeout(function () {
+        window.location.href = "love.html";
+    }, 2000);
+};
+
+// Hearts animation
+function startHearts() {
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4000);
+    }, 300);
+}
