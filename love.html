@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Drashtuu ❤️</title>
 
 <style>
+/* Background */
 body {
-    background: #ffe4e1;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('images/cute-bg.jpg'); /* Same cute background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: #ff1493;
+}
+
+/* Overlay for soft pink effect */
+.overlay {
+    background-color: rgba(255, 228, 225, 0.6);
+    min-height: 100vh;
     padding-top: 30px;
 }
 
 h1 {
-    color: #ff1493;
     font-size: 32px;
+    margin-bottom: 20px;
 }
 
 img {
@@ -25,7 +41,6 @@ img {
 
 #text {
     font-size: 22px;
-    color: #ff1493;
     width: 70%;
     margin: auto;
     line-height: 1.5;
@@ -34,27 +49,23 @@ img {
 </head>
 
 <body>
-
+<div class="overlay">
 <h1>My Drashtuu ❤️</h1>
-
 <p id="text"></p>
 
-<!-- CHANGE IMAGE NAME IF NEEDED -->
 <img src="images/your_photo.jpg">
 
 <!-- Background Music -->
 <audio id="bgm" src="music.mp3" loop></audio>
 
 <script>
-// Force music play on iPhone Safari after first tap
+// Force music play after first tap (Safari fix)
 document.body.addEventListener("click", function() {
     let music = document.getElementById("bgm");
     music.play();
 });
-</script>
 
-<script>
-// Romantic Apology Letter Typing Effect
+// Typing effect
 let msg = `My love Drashtuu ❤️
 
 I am sorry for not being present on 10th when we completed 4 years.
@@ -77,6 +88,21 @@ function typeText() {
     }
 }
 typeText();
+</script>
+
+<!-- Floating Hearts on Love Page -->
+<script>
+function startHearts() {
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4000);
+    }, 300);
+}
+startHearts();
 </script>
 
 </body>
